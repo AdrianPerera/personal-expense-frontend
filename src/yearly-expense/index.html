@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Expenses Tracker</title>
+  <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: #f0f8f4;
+          color: #333;
+      }
+
+      header {
+          background: #4CAF50;
+          padding: 15px;
+          border-radius: 5px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          color: white;
+      }
+
+      h1 {
+          margin: 0;
+          font-size: 24px;
+      }
+
+      .dropdowns {
+          margin: 15px 0;
+      }
+
+      .expenses-table {
+          width: 70%;
+          border-collapse: collapse;
+          margin-top: 20px;
+          background: white;
+          border-radius: 5px;
+          overflow: hidden;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .expenses-table th, .expenses-table td {
+          padding: 12px;
+          border: 1px solid #ddd;
+          text-align: left;
+      }
+
+      .expenses-table th {
+          background-color: #4CAF50;
+          color: white;
+      }
+
+
+      .summary {
+          margin-top: 20px;
+          background: white;
+          padding: 15px;
+          border-radius: 5px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .footer {
+          margin-top: 20px;
+          text-align: center;
+          clear: both;
+      }
+
+      button {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background 0.3s;
+      }
+
+      button:hover {
+          background-color: #45a049;
+      }
+
+      .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+      }
+
+      body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: #f0f8f4;
+          color: #333;
+      }
+
+      header {
+          background: #4CAF50;
+          padding: 15px;
+          border-radius: 5px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          color: white;
+      }
+
+      h1 {
+          margin: 0;
+          font-size: 24px;
+      }
+
+      .dropdowns {
+          margin: 15px 0;
+      }
+
+      .expenses-table {
+          width: 70%;
+          border-collapse: collapse;
+          margin-top: 20px;
+          background: white;
+          border-radius: 5px;
+          overflow: hidden;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .expenses-table th, .expenses-table td {
+          padding: 12px;
+          border: 1px solid #ddd;
+          text-align: left;
+      }
+
+      .expenses-table th {
+          background-color: #4CAF50;
+          color: white;
+      }
+
+      .chart-container {
+          width: 30%;
+          float: right;
+          margin-top: 0px;
+      }
+
+      .summary {
+          margin-top: 20px;
+          background: white;
+          padding: 15px;
+          border-radius: 5px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .footer {
+          margin-top: 20px;
+          text-align: center;
+          clear: both;
+      }
+
+      button {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background 0.3s;
+      }
+
+      button:hover {
+          background-color: #45a049;
+      }
+
+      .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+      }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Monthly Expenses Tracker</h1>
+  <div id="year-month-display">Expenses for March 2023</div>
+  <div class="navigation">
+    <button>Add Expense</button>
+    <button style="background-color: #f44336;">Bulk Delete</button>
+  </div>
+</header>
+
+<div class="dropdowns">
+  <label for="year">Select Year:</label>
+  <select id="year">
+    <option>2021</option>
+    <option>2022</option>
+    <option>2023</option>
+  </select>
+
+  <label for="month">Select Month:</label>
+  <select id="month">
+    <option>January</option>
+    <option>February</option>
+    <option>March</option>
+    <!-- Add other months -->
+  </select>
+
+  <button>Fetch Expenses</button>
+</div>
+
+<div class="clearfix">
+  <table class="expenses-table">
+    <thead>
+    <tr>
+      <th><input type="checkbox"></th>
+      <th>Date</th>
+      <th>Expense Type</th>
+      <th>Description</th>
+      <th>Amount</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><input type="checkbox"></td>
+      <td>01/03/2023</td>
+      <td>Food</td>
+      <td>Lunch at Cafe</td>
+      <td>$15.00</td>
+      <td>
+        <button>Edit</button>
+        <button style="background-color: #f44336;">Delete</button>
+      </td>
+    </tr>
+    <!-- More rows as needed -->
+    </tbody>
+  </table>
+
+  <div class="chart-container">
+    <canvas id="expenses-chart"></canvas>
+  </div>
+</div>
+

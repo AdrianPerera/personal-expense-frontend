@@ -1,0 +1,106 @@
+.add-expense-button {
+    background-color: #3A3A5A;
+    color: #FFFFFF;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 2px;
+    text-align: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 10px 0;
+}
+
+@keyframes cascade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table-container {
+    max-height: 60vh; /* Set the desired height */
+    overflow-y: auto;
+}
+
+.expenses-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #252638; /* Darker table background */
+    color: #e0e0e0; /* Light text color */
+}
+
+.expenses-table th, .expenses-table td {
+    border: 1px solid #333; /* Darker border */
+    padding: 8px;
+    text-align: left;
+}
+
+.expenses-table th {
+    background-color: #252638; /* Darker header background */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    text-align: center; /* Center text inside th */
+}
+
+.expenses-table th:nth-child(1) {
+    width: 5%;
+}
+
+.expenses-table td:nth-child(1) {
+    width: 5%;
+    text-align: center;
+}
+
+.expenses-table th:nth-child(2) {
+    width: 20%;
+}
+
+.expenses-table td:nth-child(2) {
+    width: 20%;
+    text-align: right;
+}
+
+.expenses-table th:nth-child(3) {
+    width: 15%;
+}
+
+.expenses-table td:nth-child(3) {
+    width: 15%;
+    text-align: left;
+}
+
+.expenses-table th:nth-child(4),
+.expenses-table td:nth-child(4) {
+    width: 35%;
+}
+
+.expenses-table th:nth-child(5) {
+    width: 15%;
+}
+
+.expenses-table td:nth-child(5) {
+    width: 15%;
+    text-align: right;
+}
+
+.expenses-table th:nth-child(6),
+.expenses-table td:nth-child(6) {
+    width: 10%;
+    text-align: center;
+}
+
+.expense-row {
+    opacity: 0;
+    animation: cascade 0.5s forwards;
+}

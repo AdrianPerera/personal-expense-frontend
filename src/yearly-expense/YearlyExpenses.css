@@ -1,0 +1,72 @@
+.yearly-expense-container {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    color: #FFFFFF; /* Light text color */
+}
+
+.header {
+    padding: 10px;
+    border-bottom: 1px solid #aeacac; /* Darker border */
+    color: #FFFFFF; /* Light text color */
+}
+
+.dropdowns-container {
+    background-color: #1E1E2E; /* Darker dropdown background */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #333; /* Darker border */
+    border-radius: 5px;
+    color: #e0e0e0; /* Light text color */
+}
+
+.add-expense-container {
+    background-color: #1E1E2E; /* Darker dropdown background */
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: left;
+    border: 1px solid #333; /* Darker border */
+    border-radius: 5px;
+    color: #e0e0e0; /* Light text color */
+}
+
+
+.add-expense-button {
+    background-color: #3A3A5A;
+    color: #FFFFFF;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 2px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.add-expense-button svg {
+    margin-left: 5px; /* Add some space between text and icon */
+}
+
+.dropdown {
+    margin: 0 15px;
+}
+
+.dropdown > label {
+    margin-right: 10px;
+}
+
+.dropdown > select,
+.dropdown > input {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 5px;
+}
+
